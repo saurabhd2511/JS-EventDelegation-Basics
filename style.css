@@ -1,3 +1,7 @@
+/*
+Original code:https://github.com/iliakan/javascript-tutorial-en
+*/
+
 h1{
   font-size: large;
 }
@@ -120,3 +124,4 @@ body {
 .gallery li {
   display: inline-block;
 }
+

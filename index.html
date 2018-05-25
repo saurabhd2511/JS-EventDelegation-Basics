@@ -1,83 +1,112 @@
 <!--
 Original code from tutorial : https://javascript.info/introduction-browser-events
+Original code:https://github.com/iliakan/javascript-tutorial-en
 -->
 <!doctype html>
 <html class="no-js" lang="">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-    <h1>Hide on click</h1>
-    <input type="button" id="hider" value="Click to hide the text" />
-    <div id="text">Text</div>
-
-    <h1>Hide self</h1>
-    <input type="button" onclick="this.hidden=true" value="Click to hide">
-
-    <h1>Moving things accross the matrix</h1>
-    <div id="field">
-      <img src="https://en.js.cx/clipart/ball.svg" id="ball"> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-      . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-    </div>
-
-    <h1>Create a menu sliding menu</h1>
-    <div id="sweeties" class="menu">
-      <span class="title">Sweeties (click me)!</span>
-      <ul>
-        <li>Cake</li>
-        <li>Donut</li>
-        <li>Honey</li>
-      </ul>
-    </div>
-
-    <h1>Add a closing button</h1>
-    <div>
-      <div class="pane">
-        <h3>Horse</h3>
-        <p>The horse is one of two extant subspecies of Equus ferus. It is an odd-toed ungulate mammal belonging to the taxonomic family Equidae. The horse has evolved over the past 45 to 55 million years from a small multi-toed creature, Eohippus, into the large, single-toed animal of today.</p>
-      </div>
-      <div class="pane">
-        <h3>Donkey</h3>
-        <p>The donkey or ass (Equus africanus asinus) is a domesticated member of the horse family, Equidae. The wild ancestor of the donkey is the African wild ass, E. africanus. The donkey has been used as a working animal for at least 5000 years.</p>
-      </div>
-      <div class="pane">
-        <h3>Cat</h3>
-        <p>The domestic cat (Latin: Felis catus) is a small, typically furry, carnivorous mammal. They are often called house cats when kept as indoor pets or simply cats when there is no need to distinguish them from other felids and felines. Cats are often valued by humans for companionship and for their ability to hunt vermin.
-        </p>
-      </div>
-    </div>
-    
-    <h1>Carousal</h1>
-    <div id="carousel" class="carousel">
-        <button class="arrow prev">⇦</button>
-        <div class="gallery">
-          <ul class="images">
-            <li><img src="https://en.js.cx/carousel/1.png"></li>
-            <li><img src="https://en.js.cx/carousel/2.png"></li>
-            <li><img src="https://en.js.cx/carousel/3.png"></li>
-            <li><img src="https://en.js.cx/carousel/4.png"></li>
-            <li><img src="https://en.js.cx/carousel/5.png"></li>
-            <li><img src="https://en.js.cx/carousel/6.png"></li>
-            <li><img src="https://en.js.cx/carousel/7.png"></li>
-            <li><img src="https://en.js.cx/carousel/8.png"></li>
-            <li><img src="https://en.js.cx/carousel/9.png"></li>
-            <li><img src="https://en.js.cx/carousel/10.png"></li>
-          </ul>
-        </div>
-        <button class="arrow next">⇨</button>
-      </div>
-
-
+    <table border="1">
+        <tr>
+            <td>
+                <h1>Hide on click</h1>
+            </td>
+            <td>
+                <input type="button" id="hider" value="Click to hide the text" />
+                <div id="text">Text</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h1>Hide self</h1>
+            </td>
+            <td>
+                <input type="button" onclick="this.hidden=true" value="Click to hide">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h1>Moving things accross the matrix</h1>
+            </td>
+            <td>
+                <div id="field">
+                    <img src="https://en.js.cx/clipart/ball.svg" id="ball"> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h1>Create a menu sliding menu</h1>
+            </td>
+            <td>
+                <div id="sweeties" class="menu">
+                    <span class="title">Sweeties (click me)!</span>
+                    <ul>
+                        <li>Cake</li>
+                        <li>Donut</li>
+                        <li>Honey</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h1>Add a closing button</h1></td>
+            <td>
+                <div>
+                    <div class="pane">
+                        <h3>Horse</h3>
+                        <p>The horse is one of two extant subspecies of Equus ferus. It is an odd-toed ungulate mammal belonging to the taxonomic family Equidae. The horse has evolved over the past 45 to 55 million years from a small multi-toed creature, Eohippus, into the large, single-toed animal of today.</p>
+                    </div>
+                    <div class="pane">
+                        <h3>Donkey</h3>
+                        <p>The donkey or ass (Equus africanus asinus) is a domesticated member of the horse family, Equidae. The wild ancestor of the donkey is the African wild ass, E. africanus. The donkey has been used as a working animal for at least 5000 years.</p>
+                    </div>
+                    <div class="pane">
+                        <h3>Cat</h3>
+                        <p>The domestic cat (Latin: Felis catus) is a small, typically furry, carnivorous mammal. They are often called house cats when kept as indoor pets or simply cats when there is no need to distinguish them from other felids and felines. Cats are often valued by humans for companionship and for their ability to hunt vermin.
+                        </p>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h1>Carousal</h1></td>
+            <td>
+                <div id="carousel" class="carousel">
+                    <button class="arrow prev">⇦</button>
+                    <div class="gallery">
+                        <ul class="images">
+                            <li><img src="https://en.js.cx/carousel/1.png"></li>
+                            <li><img src="https://en.js.cx/carousel/2.png"></li>
+                            <li><img src="https://en.js.cx/carousel/3.png"></li>
+                            <li><img src="https://en.js.cx/carousel/4.png"></li>
+                            <li><img src="https://en.js.cx/carousel/5.png"></li>
+                            <li><img src="https://en.js.cx/carousel/6.png"></li>
+                            <li><img src="https://en.js.cx/carousel/7.png"></li>
+                            <li><img src="https://en.js.cx/carousel/8.png"></li>
+                            <li><img src="https://en.js.cx/carousel/9.png"></li>
+                            <li><img src="https://en.js.cx/carousel/10.png"></li>
+                        </ul>
+                    </div>
+                    <button class="arrow next">⇨</button>
+                </div>
+            </td>
+        </tr>
+    </table>
 </body>
 <script type="text/javascript" src="script.js"></script>
+
 </html>

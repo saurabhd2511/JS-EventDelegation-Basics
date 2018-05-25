@@ -1,5 +1,6 @@
 /*
 Original code from tutorial : https://javascript.info/introduction-browser-events
+Original code:https://github.com/iliakan/javascript-tutorial-en
 */
 
 //Task 1: Hide on Click
