@@ -92,3 +92,79 @@ carousel.querySelector('.next').onclick = function() {
   position = Math.max(position, -width * (listElems.length - count));
   list.style.marginLeft = position + 'px';
 };
+
+
+//Chapter: Event Delegation
+
+
+//Task 1: Hide on event delegation
+container.onclick = function(event) {
+  if (event.target.className != 'remove-button') return;
+
+  let pane = event.target.closest('.pane');
+  pane.remove();
+};
+
+//Task2: Tree menu
+
+// move all text into <span>
+// they occupy exactly the place necessary for the text,
+for (let li of tree.querySelectorAll('li')) {
+  let span = document.createElement('span');
+  li.prepend(span);
+  span.append(span.nextSibling); // move the text node into span
+}
+
+// catch clicks on whole tree
+tree.onclick = function(event) {
+
+  if (event.target.tagName != 'SPAN') {
+    return;
+  }
+
+  let childrenContainer = event.target.parentNode.querySelector('ul');
+  if (!childrenContainer) return; // no children
+
+  childrenContainer.hidden = !childrenContainer.hidden;
+}
+
+//Task3 : Sortable Table
+
+
+grid.onclick = function(e) {
+  if (e.target.tagName != 'TH') return;
+
+  let th = e.target;
+  // if TH, then sort
+  // cellIndex is the number of th:
+  //   0 for the first column
+  //   1 for the second column, etc
+  sortGrid(th.cellIndex, th.dataset.type);
+};
+
+function sortGrid(colNum, type) {
+  let tbody = grid.querySelector('tbody');
+
+  let rowsArray = Array.from(tbody.rows);
+
+  // compare(a, b) compares two rows, need for sorting
+  let compare;
+
+  switch (type) {
+    case 'number':
+      compare = function(rowA, rowB) {
+        return rowA.cells[colNum].innerHTML - rowB.cells[colNum].innerHTML;
+      };
+      break;
+    case 'string':
+      compare = function(rowA, rowB) {
+        return rowA.cells[colNum].innerHTML > rowB.cells[colNum].innerHTML ? 1 : -1;
+      };
+      break;
+  }
+
+  // sort
+  rowsArray.sort(compare);
+
+  tbody.append(...rowsArray);
+}
